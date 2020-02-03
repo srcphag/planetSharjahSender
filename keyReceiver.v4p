@@ -1,0 +1,149 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="T:\0526_SLF2020_PlanetSharjah\Vvvv\keyReceiver.v4p" scrollx="0" scrolly="15" systemname="keyReceiver" filename="T:\0526_SLF2020_PlanetSharjah\Vvvv\keyReceiver.v4p">
+   <BOUNDS type="Window" left="38535" top="4515" width="6270" height="5580">
+   </BOUNDS>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="13">
+   <BOUNDS type="Node" left="690" top="4200" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="690" top="4200" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1" slicecount="8" values="0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="keyLayout">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11" Version="1.3.1">
+   </PACK>
+   <PACK Name="addonpack" Version="38.1.0">
+   </PACK>
+   <NODE id="14" systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="1725" top="4275" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" pintype="Input" visible="1" values="rawKey">
+   </PIN>
+   <PIN pinname="Input Value" visible="1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Tag" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Display Channel" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="(ROUTER DON&apos;T USE)" pintype="Output">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <NODE systemname="key1Press" filename="key1Press.v4p" nodename="key1Press.v4p" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="1658" top="219" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="135" width="7000" height="6370">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="7000" height="6370">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="key1Press" filename="key1Press.v4p" nodename="key1Press.v4p" componentmode="Hidden" id="35">
+   <BOUNDS type="Node" left="2205" top="765" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="285" width="7000" height="6370">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="7000" height="6370">
+   </BOUNDS>
+   <PIN pinname="indice" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="36">
+   <BOUNDS type="Node" left="1650" top="3210" width="2910" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="6">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Input 4" visible="1">
+   </PIN>
+   <PIN pinname="Input 5" visible="1">
+   </PIN>
+   <PIN pinname="Input 6" visible="1">
+   </PIN>
+   <PIN pinname="Input 7" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 8" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Output" dstnodeid="36" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Output" dstnodeid="36" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="36" srcpinname="Output" dstnodeid="14" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="key1Press" filename="key1Press.v4p" nodename="key1Press.v4p" componentmode="Hidden" id="38">
+   <BOUNDS type="Node" left="2790" top="1320" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="420" width="7000" height="6370">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="7000" height="6370">
+   </BOUNDS>
+   <PIN pinname="indice" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Output" dstnodeid="36" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="key1Press" filename="key1Press.v4p" nodename="key1Press.v4p" componentmode="Hidden" id="41">
+   <BOUNDS type="Node" left="3345" top="1785" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1087" top="501" width="7000" height="6370">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="7000" height="6370">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="indice" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <NODE systemname="key1Press" filename="key1Press.v4p" nodename="key1Press.v4p" componentmode="Hidden" id="40">
+   <BOUNDS type="Node" left="3937" top="2241" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1297" top="561" width="7000" height="6370">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="7000" height="6370">
+   </BOUNDS>
+   <PIN pinname="indice" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="key1Press" filename="key1Press.v4p" nodename="key1Press.v4p" componentmode="Hidden" id="39">
+   <BOUNDS type="Node" left="4522" top="2736" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1447" top="636" width="7000" height="6370">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="7000" height="6370">
+   </BOUNDS>
+   <PIN pinname="indice" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Output" dstnodeid="36" dstpinname="Input 4">
+   </LINK>
+   <LINK srcnodeid="40" srcpinname="Output" dstnodeid="36" dstpinname="Input 5">
+   </LINK>
+   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="36" dstpinname="Input 6">
+   </LINK>
+   <LINK srcnodeid="36" srcpinname="Output" dstnodeid="13" dstpinname="Y Input Value">
+   </LINK>
+   </PATCH>

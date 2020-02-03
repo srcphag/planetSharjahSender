@@ -1,0 +1,225 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="T:\0526_SLF2020_PlanetSharjah\Vvvv\receiverHttp.v4p" scrollx="0" scrolly="1080" systemname="receiverHttp" filename="T:\0526_SLF2020_PlanetSharjah\Vvvv\receiverHttp.v4p">
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="0" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="7080" top="2415" width="1485" height="375">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7080" top="2415" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="GET">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="HttpMethod">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="1" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="585" top="4185" width="3660" height="420">
+   </BOUNDS>
+   <BOUNDS type="Node" left="585" top="4185" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show SliceIndex" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="4" visible="1" values=",,,">
+   </PIN>
+   <PIN pinname="Show Characters [#0..#32,#127]" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="getOut">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="4215" top="1305" width="2130" height="300">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4215" top="1305" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="application/xml">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="MimeType">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)" exposed="1">
+   <BOUNDS type="Box" left="5100" top="3585" width="4800" height="1485">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5100" top="3585" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show SliceIndex" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="4" visible="1" values="|08.01.2015 16:13:53 - Client Setup.&lf;08.01.2015 16:13:56 - Response.&lf;ResponseStatus:&tab;Completed&lf;StatusDescription:&tab;Bad Request&lf;StatusCode:&tab;BadRequest&lf;Request:&tab;&tab;Xml&lf;ResponseUri:&tab;http://www.thomas-bayer.com/sqlrest/CUSTOMER&lf;|,|08.01.2015 16:20:10 - Client Setup.&lf;08.01.2015 16:20:10 - Response.&lf;ResponseStatus:&tab;Completed&lf;StatusDescription:&tab;Not Found&lf;StatusCode:&tab;NotFound&lf;Request:&tab;&tab;Xml&lf;ResponseUri:&tab;http://www.thomas-bayer.com/sqlrest/CUSTOMER/13556789&lf;|,,|08.01.2015 16:20:25 - Client Setup.&lf;08.01.2015 16:20:25 - Response.&lf;ResponseStatus:&tab;Completed&lf;StatusDescription:&tab;Not Found&lf;StatusCode:&tab;NotFound&lf;Request:&tab;&tab;Xml&lf;ResponseUri:&tab;http://www.thomas-bayer.com/sqlrest/CUSTOMER/13556789&lf;|">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="4">
+   <BOUNDS type="Node" left="4410" top="3600" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4410" top="3600" width="585" height="465">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="4" values="0,0,0,0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsString (Raw)" nodename="AsString (Raw)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="570" top="3780" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="HTTP_Add_Body (Network 1.0)" filename="%VVVV%\VVVV-REST-master\plugins\NetworkHTTP-REST\NetworkHTTP-REST.csproj" nodename="HTTP_Add_Body (Network 1.0)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="4215" top="2355" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Value" visible="1" slicecount="3" values="0.0000,0.0000,-2.0000">
+   </PIN>
+   <PIN pinname="Body" visible="1">
+   </PIN>
+   <PIN pinname="Key" visible="1" slicecount="1" values="application/xml">
+   </PIN>
+   </NODE>
+   <NODE systemname="HTTP-REST (Network 1.0)" filename="%VVVV%\VVVV-REST-master\plugins\NetworkHTTP-REST\NetworkHTTP-REST.csproj" nodename="HTTP-REST (Network 1.0)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="570" top="2970" width="8010" height="270">
+   </BOUNDS>
+   <PIN pinname="Body" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="BaseURL" visible="1" slicecount="19" values="https://planetsharjah.firebaseio.com/handR/x.json,https://planetsharjah.firebaseio.com/handR/y.json,https://planetsharjah.firebaseio.com/handR/z.json,https://planetsharjah.firebaseio.com/handL/x.json,https://planetsharjah.firebaseio.com/handL/y.json,https://planetsharjah.firebaseio.com/handL/z.json,https://planetsharjah.firebaseio.com/buttonTrigger/0.json,https://planetsharjah.firebaseio.com/buttonTrigger/1.json,https://planetsharjah.firebaseio.com/buttonTrigger/2.json,https://planetsharjah.firebaseio.com/buttonTrigger/3.json,https://planetsharjah.firebaseio.com/buttonValue/0.json,https://planetsharjah.firebaseio.com/buttonValue/1.json,https://planetsharjah.firebaseio.com/buttonValue/2.json,https://planetsharjah.firebaseio.com/buttonValue/3.json,https://planetsharjah.firebaseio.com/buttonRandom/0.json,https://planetsharjah.firebaseio.com/buttonRandom/1.json,https://planetsharjah.firebaseio.com/buttonRandom/2.json,https://planetsharjah.firebaseio.com/buttonRandom/3.json,https://planetsharjah.firebaseio.com/handChange.json">
+   </PIN>
+   <PIN pinname="Execute" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="File Upload Bin Size" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="9" systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="585" top="2475" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1" slicecount="1" pintype="Input" values="handChange">
+   </PIN>
+   <PIN pinname="Output" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Input 3" slicecount="1" values=".json">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" pintype="Configuration" values="3">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" pintype="Input" visible="1" values="https://planetsharjah.firebaseio.com/">
+   </PIN>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Tag" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="" pintype="Input" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Intersperse" pintype="Input" visible="1" slicecount="1" values="None">
+   </PIN>
+   <PIN pinname="Intersperse String" pintype="Input" visible="0" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="11">
+   <BOUNDS type="Node" left="750" top="1995" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="750" top="1995" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="route">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="7" dstpinname="BaseURL">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output Enum" dstnodeid="7" dstpinname="HttpMethod">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output String" dstnodeid="9" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="1" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output String" dstnodeid="6" dstpinname="Key">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Success" dstnodeid="4" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Status" dstnodeid="3" dstpinname="Input String">
+   </LINK>
+   <BOUNDS type="Window" left="11550" top="5175" width="11010" height="6375">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="38.1.0">
+   </PACK>
+   <PACK Name="dx11" Version="1.3.1">
+   </PACK>
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="7485" top="1665" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Period" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Change" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Change" dstnodeid="7" dstpinname="Execute">
+   </LINK>
+   <NODE systemname="S+H (Raw)" nodename="S+H (Raw)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="585" top="3360" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="15" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="5" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Set">
+   </LINK>
+   </PATCH>

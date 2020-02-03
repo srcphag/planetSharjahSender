@@ -1,0 +1,569 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="T:\0526_SLF2020_PlanetSharjah\Vvvv\senderData.v4p" scrollx="0" scrolly="3960" systemname="senderData" filename="E:\_Proceso\senderData\senderData.v4p" locked="0">
+   <BOUNDS type="Window" left="6675" top="8985" width="17310" height="7215">
+   </BOUNDS>
+   <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="156">
+   <BOUNDS type="Node" left="870" top="165" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="frames per second" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="158" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="870" top="450" width="795" height="255">
+   </BOUNDS>
+   <BOUNDS type="Node" left="870" top="450" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="156" srcpinname="frames per second" dstnodeid="158" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Queue (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Queue (Spreads)" componentmode="Hidden" id="159">
+   <BOUNDS type="Node" left="870" top="735" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Insert" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Frame Count" slicecount="1" values="120">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="870" top="735">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="158" srcpinname="Y Output Value" dstnodeid="159" dstpinname="Input">
+   </LINK>
+   <NODE componentmode="InABox" id="162" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="855" top="1110" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="795" left="855" top="1110" type="Box" width="3735">
+   </BOUNDS>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Slider">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0.351351351351351">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.506849315068493">
+   </PIN>
+   <PIN pinname="Slider Alignment" slicecount="1" values="Grid">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="150">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="120">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="159" srcpinname="Output" dstnodeid="162" dstpinname="Y Input Value">
+   </LINK>
+   <PACK Name="addonpack" Version="38.1.0">
+   </PACK>
+   <PACK Name="dx11" Version="1.3.1">
+   </PACK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
+   <PACK Name="VVVV.Packs.Image-master" Version="0.2.0">
+   </PACK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="570">
+   <BOUNDS type="Node" left="690" top="4485" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="690" top="4485" width="1530" height="1815">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="8" values="handL,handR,buttonTrigger,buttonValue,buttonRandom,handChange,modeEdit,scene">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="569">
+   <BOUNDS type="Node" left="675" top="7980" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="570" srcpinname="Output String" dstnodeid="569" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="705" y="7133">
+   </LINKPOINT>
+   <LINKPOINT x="705" y="7133">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="568">
+   <BOUNDS type="Node" left="690" top="8505" width="1290" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="UnixPath">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="567">
+   <BOUNDS type="Node" left="1665" top="7320" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1665" top="7320" width="780" height="975">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show SliceIndex" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="3" values="x,y,z">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="569" srcpinname="Output" dstnodeid="568" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="567" srcpinname="Output String" dstnodeid="568" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="562">
+   <BOUNDS type="Node" left="3300" top="8025" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="8" values="handL,handR,buttonTrigger,buttonValue,buttonRandom,handChange,modeEdit,scene">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="561">
+   <BOUNDS type="Node" left="3315" top="8505" width="1290" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="UnixPath">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="562" srcpinname="Output" dstnodeid="561" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="570" srcpinname="Output String" dstnodeid="562" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="750" y="7148">
+   </LINKPOINT>
+   <LINKPOINT x="3285" y="7148">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="560">
+   <BOUNDS type="Node" left="4590" top="6780" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4590" top="6780" width="840" height="1290">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="4" values="0,1,2,3">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="560" srcpinname="Output String" dstnodeid="561" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="599">
+   <BOUNDS type="Node" left="8385" top="255" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="handChange">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="606">
+   <BOUNDS type="Node" left="5940" top="7980" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="8" values="handL,handR,buttonTrigger,buttonValue,buttonRandom,handChange,modeEdit,scene">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="605">
+   <BOUNDS type="Node" left="5940" top="8430" width="1290" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="UnixPath">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="606" srcpinname="Output" dstnodeid="605" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="570" srcpinname="Output String" dstnodeid="606" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="750" y="7125">
+   </LINKPOINT>
+   <LINKPOINT x="5940" y="7125">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="560" srcpinname="Output String" dstnodeid="605" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="608">
+   <BOUNDS type="Node" left="9315" top="7995" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="8" values="handL,handR,buttonTrigger,buttonValue,buttonRandom,handChange,modeEdit,scene">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="5">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="607">
+   <BOUNDS type="Node" left="9315" top="8460" width="1290" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="None">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="608" srcpinname="Output" dstnodeid="607" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="570" srcpinname="Output String" dstnodeid="608" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="750" y="7133">
+   </LINKPOINT>
+   <LINKPOINT x="9315" y="7133">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="senderHttp" filename="senderHttp.v4p" nodename="senderHttp.v4p" componentmode="Hidden" id="611">
+   <BOUNDS type="Node" left="681" top="9015" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="5823" width="11010" height="6385">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="11010" height="6385">
+   </BOUNDS>
+   <PIN pinname="route" visible="1">
+   </PIN>
+   <PIN pinname="value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="568" srcpinname="Output" dstnodeid="611" dstpinname="route">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="612">
+   <BOUNDS type="Node" left="1320" top="9435" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="sendHandPosition">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="612" srcpinname="Input Value" dstnodeid="611" dstpinname="value">
+   </LINK>
+   <NODE systemname="senderHttp" filename="senderHttp.v4p" nodename="senderHttp.v4p" componentmode="Hidden" id="616">
+   <BOUNDS type="Node" left="3330" top="9015" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2229" top="5823" width="11010" height="6385">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14505" top="6840" width="11010" height="6375">
+   </BOUNDS>
+   <PIN pinname="route" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="615">
+   <BOUNDS type="Node" left="3969" top="9435" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="sendButtonTrigger">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="615" srcpinname="Input Value" dstnodeid="616" dstpinname="value">
+   </LINK>
+   <LINK srcnodeid="561" srcpinname="Output" dstnodeid="616" dstpinname="route">
+   </LINK>
+   <NODE systemname="senderHttp" filename="senderHttp.v4p" nodename="senderHttp.v4p" componentmode="Hidden" id="620">
+   <BOUNDS type="Node" left="5955" top="9000" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4854" top="5808" width="11010" height="6385">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14505" top="6840" width="11010" height="6375">
+   </BOUNDS>
+   <PIN pinname="route" visible="1" slicecount="4" values="buttonValue/0,buttonValue/1,buttonValue/2,buttonValue/3">
+   </PIN>
+   <PIN pinname="value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="619">
+   <BOUNDS type="Node" left="6594" top="9420" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="sendButtonRandom">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="619" srcpinname="Input Value" dstnodeid="620" dstpinname="value">
+   </LINK>
+   <NODE systemname="senderHttp" filename="senderHttp.v4p" nodename="senderHttp.v4p" componentmode="Hidden" id="622">
+   <BOUNDS type="Node" left="9315" top="9015" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8214" top="5823" width="11010" height="6385">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14505" top="6840" width="11010" height="6375">
+   </BOUNDS>
+   <PIN pinname="route" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="621">
+   <BOUNDS type="Node" left="9954" top="9435" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="handChange">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="621" srcpinname="Input Value" dstnodeid="622" dstpinname="value">
+   </LINK>
+   <LINK srcnodeid="605" srcpinname="Output" dstnodeid="620" dstpinname="route">
+   </LINK>
+   <LINK srcnodeid="607" srcpinname="Output" dstnodeid="622" dstpinname="route">
+   </LINK>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="624">
+   <BOUNDS type="Node" left="675" top="9870" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="nameHandPosition">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="568" srcpinname="Output" dstnodeid="624" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="625">
+   <BOUNDS type="Node" left="3315" top="9885" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="nameButtonTrigger">
+   </PIN>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="561" srcpinname="Output" dstnodeid="625" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="626">
+   <BOUNDS type="Node" left="5940" top="9870" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="nameButtonRandom">
+   </PIN>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="605" srcpinname="Output" dstnodeid="626" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="627">
+   <BOUNDS type="Node" left="8895" top="9900" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="nameHandChange">
+   </PIN>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="629">
+   <BOUNDS type="Node" left="8895" top="9420" width="690" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="/">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="None">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="607" srcpinname="Output" dstnodeid="629" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="629" srcpinname="Output" dstnodeid="627" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="635">
+   <BOUNDS type="Node" left="11880" top="7965" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="8" values="handL,handR,buttonTrigger,buttonValue,buttonRandom,handChange,modeEdit,scene">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="6">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="634">
+   <BOUNDS type="Node" left="11880" top="8430" width="1290" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="None">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="635" srcpinname="Output" dstnodeid="634" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="senderHttp" filename="senderHttp.v4p" nodename="senderHttp.v4p" componentmode="Hidden" id="633">
+   <BOUNDS type="Node" left="11880" top="8985" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10779" top="5793" width="11010" height="6385">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14505" top="6840" width="11010" height="6375">
+   </BOUNDS>
+   <PIN pinname="route" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="632">
+   <BOUNDS type="Node" left="12519" top="9405" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="sendModeEdit">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="632" srcpinname="Input Value" dstnodeid="633" dstpinname="value">
+   </LINK>
+   <LINK srcnodeid="634" srcpinname="Output" dstnodeid="633" dstpinname="route">
+   </LINK>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="631">
+   <BOUNDS type="Node" left="11460" top="9870" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="nameModeEdit">
+   </PIN>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="630">
+   <BOUNDS type="Node" left="11460" top="9390" width="690" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="/">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="None">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="634" srcpinname="Output" dstnodeid="630" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="630" srcpinname="Output" dstnodeid="631" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="570" srcpinname="Output String" dstnodeid="635" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="750" y="7118">
+   </LINKPOINT>
+   <LINKPOINT x="11880" y="7118">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="641">
+   <BOUNDS type="Node" left="14415" top="7965" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="8" values="handL,handR,buttonTrigger,buttonValue,buttonRandom,handChange,modeEdit,scene">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="7">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="640">
+   <BOUNDS type="Node" left="14415" top="8430" width="1290" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="None">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="641" srcpinname="Output" dstnodeid="640" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="senderHttp" filename="senderHttp.v4p" nodename="senderHttp.v4p" componentmode="Hidden" id="639">
+   <BOUNDS type="Node" left="14415" top="8985" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13314" top="5793" width="11010" height="6385">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14505" top="6840" width="11010" height="6375">
+   </BOUNDS>
+   <PIN pinname="route" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="638">
+   <BOUNDS type="Node" left="15054" top="9405" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="sendSceneNumber">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="638" srcpinname="Input Value" dstnodeid="639" dstpinname="value">
+   </LINK>
+   <LINK srcnodeid="640" srcpinname="Output" dstnodeid="639" dstpinname="route">
+   </LINK>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="637">
+   <BOUNDS type="Node" left="13995" top="9870" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="nameScene">
+   </PIN>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="636">
+   <BOUNDS type="Node" left="13995" top="9390" width="690" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="/">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="None">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="640" srcpinname="Output" dstnodeid="636" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="636" srcpinname="Output" dstnodeid="637" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="570" srcpinname="Output String" dstnodeid="641" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="750" y="7118">
+   </LINKPOINT>
+   <LINKPOINT x="14415" y="7118">
+   </LINKPOINT>
+   </LINK>
+   </PATCH>
